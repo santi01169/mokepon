@@ -41,6 +41,9 @@ function seleccionarMascotaJugador(){
     let hipodogeSeleccionado = document.getElementById("hipodoge").checked
     let capipepoSeleccionado = document.getElementById("capipepo").checked
     let ratigueyaSeleccionado = document.getElementById("ratigueya").checked
+    let kongSeleccionado = document.getElementById("kong").checked
+    let guardianSeleccionado = document.getElementById("guardian").checked
+    let dogeerSeleccionado = document.getElementById("dogeer").checked
 
     let spanMascotaJugador = document.getElementById("mascota-jugador")
 
@@ -50,6 +53,12 @@ function seleccionarMascotaJugador(){
         spanMascotaJugador.innerHTML = "Capipepo"
     }else if(ratigueyaSeleccionado){
         spanMascotaJugador.innerHTML = "Ratigueya"
+    }else if(kongSeleccionado){
+        spanMascotaJugador.innerHTML = "kong"
+    }else if(guardianSeleccionado){
+        spanMascotaJugador.innerHTML = "Guardian"
+    }else if(dogeerSeleccionado){
+        spanMascotaJugador.innerHTML = "Dogeer"
     }else{
         alert("Debes seleccionar una Mascota")
     }
@@ -58,13 +67,19 @@ function seleccionarMascotaJugador(){
 }
 
 function seleccionarMascotaEmemigo(){
-    let mascotaAleatorio = aleatorio(1,3)
+    let mascotaAleatorio = aleatorio(1,6)
     let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
 
     if(mascotaAleatorio == 1){
         spanMascotaEnemigo.innerHTML = "Hipodoge"
     }else if(mascotaAleatorio == 2){
         spanMascotaEnemigo.innerHTML = "Capipepo"
+         }else if(mascotaAleatorio == 3){
+        spanMascotaEnemigo.innerHTML = "kong"
+         }else if(mascotaAleatorio == 4){
+        spanMascotaEnemigo.innerHTML = "Guardian"
+         }else if(mascotaAleatorio == 5){
+        spanMascotaEnemigo.innerHTML = "Dogeer"
     }else{
         spanMascotaEnemigo.innerHTML = "Ratigueya"
     }
@@ -72,17 +87,17 @@ function seleccionarMascotaEmemigo(){
 }
 
 function ataqueFuego(){
-    ataqueJugador = "FUEGO"
+    ataqueJugador = "FUEGO🔥"
     ataqueAleatorioEnemigo()
 }
 
 function ataqueAgua(){
-    ataqueJugador = "AGUA"
+    ataqueJugador = "AGUA💦"
     ataqueAleatorioEnemigo()
 }
 
 function ataqueTierra(){
-    ataqueJugador = "TIERRA"
+    ataqueJugador = "TIERRA🌱"
     ataqueAleatorioEnemigo()
 }
 
@@ -90,11 +105,11 @@ function ataqueAleatorioEnemigo(){
     let ataqueAleatorio = aleatorio(1,3)
 
     if(ataqueAleatorio == 1){
-        ataqueEnemigo = "FUEGO"
+        ataqueEnemigo = "FUEGO🔥"
     }else if (ataqueAleatorio == 2){
-        ataqueEnemigo = "AGUA"
+        ataqueEnemigo = "AGUA💦"
     }else{
-        ataqueEnemigo = "TIERRA"
+        ataqueEnemigo = "TIERRA🌱"
     }
     combate()
 }
